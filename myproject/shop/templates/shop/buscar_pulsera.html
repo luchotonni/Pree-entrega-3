@@ -1,0 +1,19 @@
+<!-- buscar_pulsera.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Buscar Pulsera</h2>
+<form method="GET" action="{% url 'buscar_pulsera' %}">
+    <input type="text" name="q" placeholder="Buscar pulsera...">
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultados %}
+    <h3>Resultados de búsqueda:</h3>
+    <ul>
+        {% for pulsera in resultados %}
+            <li>{{ pulsera.nombre }} - {{ pulsera.descripcion }} - {{ pulsera.precio }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

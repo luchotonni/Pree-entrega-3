@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Tienda de Ropa{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'insertar_cartera' %}">Insertar Cartera</a></li>
+                <li><a href="{% url 'insertar_remera' %}">Insertar Remera</a></li>
+                <li><a href="{% url 'insertar_pulsera' %}">Insertar Pulsera</a></li>
+                <li><a href="{% url 'buscar_cartera' %}">Buscar Cartera</a></li>
+                <li><a href="{% url 'buscar_remera' %}">Buscar Remera</a></li>
+                <li><a href="{% url 'buscar_pulsera' %}">Buscar Pulsera</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa</p>
+    </footer>
+</body>
+</html>

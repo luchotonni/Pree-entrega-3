@@ -1,0 +1,19 @@
+<!-- buscar_remera.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Buscar Remera</h2>
+<form method="GET" action="{% url 'buscar_remera' %}">
+    <input type="text" name="q" placeholder="Buscar remera...">
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultados %}
+    <h3>Resultados de búsqueda:</h3>
+    <ul>
+        {% for remera in resultados %}
+            <li>{{ remera.nombre }} - {{ remera.descripcion }} - {{ remera.precio }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

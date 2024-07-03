@@ -1,0 +1,19 @@
+<!-- buscar_cartera.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Buscar Cartera</h2>
+<form method="GET" action="{% url 'buscar_cartera' %}">
+    <input type="text" name="q" placeholder="Buscar cartera...">
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultados %}
+    <h3>Resultados de búsqueda:</h3>
+    <ul>
+        {% for cartera in resultados %}
+            <li>{{ cartera.nombre }} - {{ cartera.descripcion }} - {{ cartera.precio }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}
