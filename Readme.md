@@ -12,7 +12,7 @@ Este proyecto es una tienda de ropa desarrollada con Django.
 1. Clona este repositorio:
     ```bash
     git clone https://github.com/luchotonni/Pree-entrega-3.git
-    cd tu-repositorio
+    cd myproject
     ```
 
 2. Instala las dependencias:
